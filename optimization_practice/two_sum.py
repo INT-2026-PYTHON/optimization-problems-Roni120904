@@ -106,7 +106,7 @@ def two_sum_fast(nums, target):
 
 n = int(input("Enter number of elements: "))
 nums = []
-for _ in range(n):
+for i in range(n):
     nums.append(int(input("Enter element: ")))
 
 target = int(input("Enter target: "))

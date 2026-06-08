@@ -97,7 +97,7 @@ def has_pair_fast(nums, k):
 
 n = int(input("Enter number of elements: "))
 nums = []
-for _ in range(n):
+for i in range(n):
     num = int(input("Enter element: "))
     nums.append(num)
 
