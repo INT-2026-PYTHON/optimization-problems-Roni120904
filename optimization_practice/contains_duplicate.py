@@ -63,3 +63,30 @@ Optimized:   False  # O(n)
 =================================================
 
 """
+
+def has_duplicate_brute(nums):  #compare every pair of elements O(n^2)
+  
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
+            if nums[i] == nums[j]:
+                return True
+    return False
+
+def has_duplicate_fast(nums):  # each element is processed only once
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+
+    return False
+
+n = int(input("Enter number of elements: "))
+nums = []
+for i in range(n):
+    num = int(input("Enter element: "))
+    nums.append(num)
+
+print("Brute Force:", has_duplicate_brute(nums))  # O(n^2)
+print("Optimized:  ", has_duplicate_fast(nums))   # O(n)
